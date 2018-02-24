@@ -1,6 +1,6 @@
-***********
-tpg-invoice
-***********
+**************
+`tpg-invoice`_
+**************
 
 Extracts tax invoices from the `TPG`_ Cyberstore (My Account) at the command
 line.
@@ -113,4 +113,5 @@ Returns the latest, non-$0 invoice as HTML::
 
 
 .. _TPG: https://www.tpg.com.au/
+.. _tpg-invoice: https://github.com/micolous/tpg-invoice
 
