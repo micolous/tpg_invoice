@@ -15,6 +15,14 @@ tested with other products (eg: mobile, dial-up).
 Installing
 ==========
 
+The easiest way to install ``tpg_invoice`` is::
+
+	$ pip3 install tpg_invoice
+
+Manual installation
+-------------------
+
+
 ``tpg_invoice`` requires the following::
 
 * Python 3 (tested on 3.6)

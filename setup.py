@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'tpg-invoice'
+NAME = 'tpg_invoice'
 DESCRIPTION = 'Extracts invoices from the TPG website.'
 URL = 'https://github.com/micolous/tpg_invoice'
 EMAIL = 'micolous+git@gmail.com'
