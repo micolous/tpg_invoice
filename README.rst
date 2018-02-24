@@ -23,7 +23,7 @@ Manual installation
 -------------------
 
 
-``tpg_invoice`` requires the following::
+``tpg_invoice`` requires the following:
 
 * Python 3 (tested on 3.6)
 * BeautifulSoup4
