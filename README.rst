@@ -22,7 +22,6 @@ The easiest way to install ``tpg_invoice`` is::
 Manual installation
 -------------------
 
-
 ``tpg_invoice`` requires the following:
 
 * Python 3 (tested on 3.6)
@@ -117,6 +116,28 @@ Returns the latest, non-$0 invoice as HTML::
 	<div class="iaspage-area">Tax Invoice Display<table align="RIGHT"><!--/home/database/cgi-bin/inv_disp.cgi:153--><tr><td align="RIGHT">TPG Internet Pty Ltd ABN 15 068 383 737</td></tr><tr><td align="RIGHT">65 Waterloo Rd, MACQUARIE PARK, NSW, 2113</td></tr></table>
 	[...]
 
+Email the latest invoice: ``email_invoice.sh``
+----------------------------------------------
+
+``email_invoice.sh`` will let you automatically email the latest, non-$0
+invoice.  This is useful if you need to automatically send your TPG invoices to
+your accountant, bookkeeper, or expense reporting system.
+
+This has been primarily tested with Concur, which converts incoming HTML emails
+to PDF automatically, and adds them as an available receipt. For more details on
+configuring Concur to receive receipts from additional email addresses, please
+see the Concur documentation.
+
+This script is designed to be run as a ``cron(8)`` job, and will need to be
+modified to your local needs (such as setting the destination email address,
+and the subject line).
+
+The script requires that you have the BSD ``mail(1)`` package configured to be
+able to send outgoing email, which generally requires a local MTA.
+
+``fmt(1)`` is required to split long lines in the output, as the SMTP protocol
+specifies that lines must be less than 998 characters. The typical invoice
+output is more than this, and can cause some MTAs to reject the email outright.
 
 .. _TPG: https://www.tpg.com.au/
 .. _tpg_invoice: https://github.com/micolous/tpg_invoice
